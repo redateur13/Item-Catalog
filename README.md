@@ -91,56 +91,56 @@ Item-Catalog.zip/
 
 http://localhost:5000/ or http://localhost:5000/catalog 
  Returns catalog page with all categories and recently added books without login
-<img src="Item-Catalog/blob/master/screenshot/catalog.jpg" width="800">
+<img src="screenshot/catalog.jpg" width="800">
  
  
  ```/catalog/<int:catalog_id>```
  ```/catalog/<int:catalog_id>/books```
 http://localhost:5000/catalog/1/books
  Returns number of  books in  category 
-<img src="Item-Catalog/blob/master/screenshot/categories.jpg" width="800">
+<img src="screenshot/categories.jpg" width="800">
   
   
 ```/catalog/<int:catalog_id>/books/<int:book_id>```
 http://localhost:5000/catalog/3/books/7
 show a Book information
-<img src="screenshots/book.jpg" width="800">
+<img src="screenshot/book.jpg" width="800">
 
 
 http://localhost:5000/login
 login with google api
-<img src="screenshots/login.jpg" width="800">
-<img src="screenshots/login2.jpg" width="800">
+<img src="screenshot/login.jpg" width="800">
+<img src="screenshot/login2.jpg" width="800">
 
 
 http://localhost:5000/catalog/add
 Allows user to add a new book
-<img src="screenshots/add.jpg" width="800">
+<img src="screenshot/add.jpg" width="800">
 
 
 ``` /catalog/<int:catalog_id>/books/<int:book_id>/edit```
 Allows user to edit  his book
-<img src="screenshots/edit.jpg" width="800">
+<img src="screenshot/edit.jpg" width="800">
 
 
 ```/catalog/<int:catalog_id>/books/<int:book_id>/delete```
 Allows user to delete his book
-<img src="screenshots/delete.jpg" width="800">
+<img src="screenshot/delete.jpg" width="800">
 
 ## JSON Endpoints
 http://localhost:5000/catalog/JSON
-<img src="screenshots/catalogJSON.jpg" width="800">
+<img src="screenshot/catalogJSON.jpg" width="800">
 return categories information
 
 ```/catalog/<int:catalog_id>/JSON```
 http://localhost:5000/catalog/3/JSON
 return category books information
-<img src="screenshots/categoryBooks.jpg" width="800">
+<img src="screenshot/categoryBooks.jpg" width="800">
 
 ```/catalog/<int:catalog_id>/books/JSON```
 http://localhost:5000/catalog/2/books/2/JSON
 return a book detail
-<img src="screenshots/bookJSON.jpg" width="800">
+<img src="screenshot/bookJSON.jpg" width="800">
 
 
  ## Licence
