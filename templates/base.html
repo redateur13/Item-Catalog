@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Books catalog website">
+	<meta name="author" content="zerrougui reda">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+	<title>Computer Books catalog</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+</head>
+
+<body >
+		<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url_for('showCategories') }}"><h2>Computer Books catalog</h2></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto">
+
+				</ul>
+					{%if 'username' not in session %}
+					<a href="{{url_for('login')}}" class="btn btn-success">
+						Login
+					</a>
+					{% else %}
+					<a href="{{url_for('logout')}}" class="btn btn-danger">
+						Logout
+					</a>
+					{% endif %}
+			</div>
+		</div>
+	</nav>
+	<!-- Page Content -->
+	<div class="jumbotron jumbotron-fluid">
+		<header>
+			<div class="container">
+				<a href="/" class="header__title">
+					<h2 class="title__text">Book Catalog</h2>
+				</a>
+			</div>
+		</header>
+		<div class="content">
+			<div class="container">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+
+

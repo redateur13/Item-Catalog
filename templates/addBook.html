@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-8">
+			<h3 class="header__title" > Add New Book </h3>
+			<div>
+			<form action="#" method="post" class="form__label">
+				<fieldset>
+					<label for="" class="form__label">Book name : </label>
+					
+					<input type="text" name="name" class="form__label">
+			</div>
+			<div>
+					<label for="Description" class="form-control">Description:</label>
+					<textarea name="description" id="Description"  rows="10" class="form-control"></textarea>
+			</div>
+					<label for="" class="form__label">Category:</label>
+					<select class="form-control" name="category">
+						{% for category in categories %}
+							<option value="{{category.id}}">{{category.name}}</option>
+						{% endfor %}
+					</select>
+				</fieldset>
+				<input type="submit" value="submit" class="btn btn-primary">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						{% for message in messages %}
+							 <p class="alert alert-danger" role="alert">{{ message }}</p>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

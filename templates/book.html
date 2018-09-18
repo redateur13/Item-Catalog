@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="row">
+		<div col-md-8>
+			<h2 >
+				<span class="header__title">{{book.name}}</span>
+			</h2>
+		</div>
+			<div class="container">
+				{{book.description}}
+			</div>
+			<div>
+				<a href="{{url_for('showCategory', catalog_id = book.category_id)}}" class="btn btn-info">Back</a>
+
+				{% if 'username' in session and creator.id == session['user_id'] %}
+					<a href="{{url_for('editBook', catalog_id = book.category_id, book_id = book.id)}}" class="btn btn-primary">Edit</a>
+					<a href="{{url_for('deleteBook', catalog_id = book.category_id, book_id = book.id)}}" class="btn btn-danger">Delete</a>
+				{% endif %}
+			</div>
+	</div>
+
+{% endblock %}

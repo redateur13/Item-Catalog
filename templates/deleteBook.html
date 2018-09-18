@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-8">
+			<h3 class="header__title">Delete book</h3>
+			<form action="#" method="post">
+				<h4 class="alert-danger">Are you sure you want to delete {{book.name}}?</h4>
+				<a href="{{url_for('showBook', catalog_id = book.category_id ,book_id = book.id )}}" class="btn btn-info">Back</a>
+				<input class="btn btn-danger" type="submit" value="Delete">
+			</form>
+		</div>
+	</div>
+
+{% endblock %}

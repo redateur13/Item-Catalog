@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-md-4">
+				<h3 class="header__title">Categories</h3>
+				<h5>
+				<ul>
+					{% for category in categories %}
+						<a href="{{url_for('showCategory', catalog_id = category.id )}}">
+							<li> {{category.name}}</li>
+						</a>
+					{% endfor %}
+				</ul>
+				</h5>
+		</div>
+
+		<div class="col-md-8">
+			<div class="header__title" >
+				<h3> Latest Books </h3>
+				<h5>
+				<ul>
+					{% for book in books %}
+						<a href="{{url_for('showBook', catalog_id = book.category_id ,book_id = book.id )}}">
+							<li>
+								{{book.name}}
+								<span class="header__title">({{book.category.name}})</span>
+							</li>
+						</a>
+					{% endfor %}
+				</ul>
+				</h5>
+				{% if 'username' in session %}
+					<a href="{{url_for('addBook')}}" class="btn btn-success">Add Book</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

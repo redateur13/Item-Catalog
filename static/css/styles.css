@@ -1,0 +1,20 @@
+/* Custom styles for Bootstrap --> */
+.header__title { 
+    color: green ;
+    font: 24px;
+}
+
+.title__text{ 
+    text-align: left;
+    padding-top: 20px;
+    color:blue;
+} 
+
+.book__name{ 
+    color: #3f3f3f ;
+}
+
+.content{ 
+    padding-top: 20px;
+}
+
