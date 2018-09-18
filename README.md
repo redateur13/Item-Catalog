@@ -91,55 +91,56 @@ Item-Catalog.zip/
 
 http://localhost:5000/ or http://localhost:5000/catalog 
  Returns catalog page with all categories and recently added books without login
- ![alt text](screenshots/catalog.jpg "home page, show categories and latest books .")
+<img src="screenshots/catalog.jpg" width="800">
  
  
  ```/catalog/<int:catalog_id>```
  ```/catalog/<int:catalog_id>/books```
 http://localhost:5000/catalog/1/books
  Returns number of  books in  category 
-  ![alt text](screenshots/categories.jpg " show Returns number of  books in  category .")
+<img src="screenshots/categories.jpg" width="800">
   
   
 ```/catalog/<int:catalog_id>/books/<int:book_id>```
 http://localhost:5000/catalog/3/books/7
 show a Book information
-![alt text](screenshots/book.jpg "show a Book information .")
+<img src="screenshots/book.jpg" width="800">
 
 
 http://localhost:5000/login
 login with google api
-![alt text](screenshots/login.jpg "login ")
-![alt text](screenshots/login2.jpg "login with google .")
+<img src="screenshots/login.jpg" width="800">
+<img src="screenshots/login2.jpg" width="800">
 
 
 http://localhost:5000/catalog/add
 Allows user to add a new book
-![alt text](screenshots/add.jpg "add a new book ")
+<img src="screenshots/add.jpg" width="800">
+
 
 ``` /catalog/<int:catalog_id>/books/<int:book_id>/edit```
 Allows user to edit  his book
-![alt text](screenshots/edit.jpg "edit ")
+<img src="screenshots/edit.jpg" width="800">
 
 
 ```/catalog/<int:catalog_id>/books/<int:book_id>/delete```
 Allows user to delete his book
-![alt text](screenshots/delete.jpg "delete ")
+<img src="screenshots/delete.jpg" width="800">
 
 ## JSON Endpoints
 http://localhost:5000/catalog/JSON
-![alt text](screenshots/catalogJSON.jpg "json categories")
+<img src="screenshots/catalogJSON.jpg" width="800">
 return categories information
 
 ```/catalog/<int:catalog_id>/JSON```
 http://localhost:5000/catalog/3/JSON
 return category books information
-![alt text](screenshots/categoryBooksJSON.jpg " category books ")
+<img src="screenshots/categoryBooks.jpg" width="800">
 
 ```/catalog/<int:catalog_id>/books/JSON```
 http://localhost:5000/catalog/2/books/2/JSON
 return a book detail
-![alt text](screenshots/bookJSON.jpg "  book detail ")
+<img src="screenshots/bookJSON.jpg" width="800">
 
 
  ## Licence
