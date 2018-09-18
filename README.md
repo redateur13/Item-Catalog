@@ -91,14 +91,14 @@ Item-Catalog.zip/
 
 http://localhost:5000/ or http://localhost:5000/catalog 
  Returns catalog page with all categories and recently added books without login
-<img src="screenshots/catalog.jpg" width="800">
+<img src="Item-Catalog/blob/master/screenshot/catalog.jpg" width="800">
  
  
  ```/catalog/<int:catalog_id>```
  ```/catalog/<int:catalog_id>/books```
 http://localhost:5000/catalog/1/books
  Returns number of  books in  category 
-<img src="screenshots/categories.jpg" width="800">
+<img src="Item-Catalog/blob/master/screenshot/categories.jpg" width="800">
   
   
 ```/catalog/<int:catalog_id>/books/<int:book_id>```
