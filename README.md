@@ -90,56 +90,57 @@ Item-Catalog.zip/
 ## The expected program output is as the following : 
 
 http://localhost:5000/ or http://localhost:5000/catalog 
- Returns catalog page with all categories and recently added books without login
+- Returns catalog page with all categories and recently added books without login
 <img src="screenshot/catalog.jpg" width="800">
  
  
  ```/catalog/<int:catalog_id>```
  ```/catalog/<int:catalog_id>/books```
 http://localhost:5000/catalog/1/books
- Returns number of  books in  category 
+- Returns number of  books in  category 
 <img src="screenshot/categories.jpg" width="800">
   
   
 ```/catalog/<int:catalog_id>/books/<int:book_id>```
 http://localhost:5000/catalog/3/books/7
-show a Book information
+- show a Book information
 <img src="screenshot/book.jpg" width="800">
 
 
 http://localhost:5000/login
-login with google api
+- login with google api
 <img src="screenshot/login.jpg" width="800">
 <img src="screenshot/login2.jpg" width="800">
 
 
 http://localhost:5000/catalog/add
-Allows user to add a new book
+- Allows user to add a new book
 <img src="screenshot/add.jpg" width="800">
 
 
 ``` /catalog/<int:catalog_id>/books/<int:book_id>/edit```
-Allows user to edit  his book
+- Allows user to edit  his book
 <img src="screenshot/edit.jpg" width="800">
 
 
 ```/catalog/<int:catalog_id>/books/<int:book_id>/delete```
-Allows user to delete his book
+- Allows user to delete his book
 <img src="screenshot/delete.jpg" width="800">
 
 ## JSON Endpoints
 http://localhost:5000/catalog/JSON
+- return categories information
 <img src="screenshot/catalogJSON.jpg" width="800">
-return categories information
+
 
 ```/catalog/<int:catalog_id>/JSON```
 http://localhost:5000/catalog/3/JSON
-return category books information
-<img src="screenshot/categoryBooks.jpg" width="800">
+- return category books information
+<img src="screenshot/categoryBooksJSON.jpg" width="800">
 
 ```/catalog/<int:catalog_id>/books/JSON```
 http://localhost:5000/catalog/2/books/2/JSON
-return a book detail
+- return a book detail
 <img src="screenshot/bookJSON.jpg" width="800">
 
 
