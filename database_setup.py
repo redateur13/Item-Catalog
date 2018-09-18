@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-"""User class"""
+"""User class """
 
 
 class User(Base):
@@ -17,7 +17,7 @@ class User(Base):
     email = Column(String(250), nullable=False)
     picture = Column(String(250))
 
-"""Category class"""
+"""Category class """
 
 
 class Category(Base):
@@ -35,7 +35,7 @@ class Category(Base):
             'id': self.id,
             'name': self.name,
         }
-"""Book class"""
+"""Book class """
 
 
 class Book(Base):

@@ -53,7 +53,7 @@ def getUserID(email):
         return None
 
 
-# JSON APIs to show Catalog information
+# JSON API to show Catalog information
 @app.route('/catalog/JSON')
 def showCategoriesJSON():
     categories = session.query(Category).all()
@@ -61,7 +61,7 @@ def showCategoriesJSON():
                    categories=[category.serialize for category in categories])
 
 
-# JSON APIs to show category books information
+# JSON API to show category books information
 @app.route('/catalog/<int:catalog_id>/JSON')
 @app.route('/catalog/<int:catalog_id>/books/JSON')
 def showCategoryJSON(catalog_id):
@@ -69,7 +69,7 @@ def showCategoryJSON(catalog_id):
     return jsonify(books=[book.serialize for book in books])
 
 
-# JSON APIs to show book information
+# JSON API to show book information
 @app.route('/catalog/<int:catalog_id>/books/<int:book_id>/JSON')
 def showBookJSON(catalog_id, book_id):
     book = session.query(Book).filter_by(id=book_id).first()

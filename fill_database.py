@@ -142,7 +142,7 @@ session.commit()
 book3 = Book(
              name="Introduction to Algorithms",
              user_id=1,
-             description="""sIntroduction to Algorithms by Thomas Cormen
+             description="""Introduction to Algorithms by Thomas Cormen
               is a more advanced programming book with an encyclopedia
               type listing of vEB trees, multithreaded algorithms,
               dynamic programming, edge-base flow, and other algorithms
